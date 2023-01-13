@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.text-primary-color {
+    color: rgba(61, 17, 97);
+}
+
+.bg-primary-color {
+    background-color: rgba(61, 17, 97);
+}

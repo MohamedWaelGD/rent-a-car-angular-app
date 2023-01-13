@@ -1,0 +1,14 @@
+.bg-car {
+    background-image: url('/assets/car-bg-1.jpg');
+    background-size: cover;
+}
+
+.bg-car-color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(61, 17, 97, 0.6);
+    z-index: 1;
+}

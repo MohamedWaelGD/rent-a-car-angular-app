@@ -1,0 +1,87 @@
+<div>
+  <div class="row w-100 m-0">
+    <div class="col-12 col-sm-8 p-0">
+      <img src="/assets/vector-cars.jpg" style="object-fit: cover; height: 100%; width: 100%;"/>
+    </div>
+    <div class="col-12 col-sm-4 d-flex flex-column align-items-center justify-content-center text-light text-center p-3 bg-primary-color" style="height: 700px;">
+      <h1>You can now rentA car from our store!</h1>
+      <button class="btn btn-warning p-3 w-25 fw-bold">Join</button>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div>
+      <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima sed, iure quisquam quos aut dolor quod aperiam possimus. Id, fugit. Reprehenderit molestiae natus magni, illum placeat voluptatem rem sed eum.</p>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12 col-lg-4" *ngFor="let c of vectorCars">
+        <div class="card h-100">
+          <img [src]="'/assets/' + c.src" class="card-img-top" style="height: 37vh; object-fit: contain;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{c.title}}</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae pariatur.</p>
+            <a href="#" class="btn btn-primary">Open Category</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima sed, iure quisquam quos aut dolor quod aperiam possimus. Id, fugit. Reprehenderit molestiae natus magni, illum placeat voluptatem rem sed eum.</p>
+      </div>
+    </div>    
+  </div>
+  <div class="bg-dark p-3">
+    <div class="row p-5">
+      <div class="col-12 col-md-6 col-lg-4 mt-4" *ngFor="let c of shopCars">
+        <div class="card h-100">
+          <img [src]="c.url" class="card-img-top" style="height: 37vh; object-fit: contain;" alt="...">
+          <div class="card-body">
+            <h1 class="card-title">{{c.name}}</h1>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae pariatur.</p>
+            <div class="d-flex justify-content-between">
+              <h3>Price: {{c.price}}$</h3>
+              <a href="#" class="btn btn-primary">Order Car</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center my-2">
+      <button class="btn btn-primary fw-bold p-3">Show More</button>
+    </div>
+  </div>
+  <div class="text-center p-5">
+    <h1>About us</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At doloremque voluptatum optio vero. Ipsa hic qui accusamus, ut laborum, non possimus tempora alias, modi eum ipsam est aliquid culpa dicta. At doloremque voluptatum optio vero. Ipsa hic qui accusamus, ut laborum, non possimus tempora alias, modi eum ipsam est aliquid culpa dicta. Ipsa hic qui accusamus, ut laborum, non possimus tempora alias, modi eum ipsam est aliquid culpa dicta. At doloremque voluptatum optio vero. Ipsa hic qui accusamus, ut laborum, non possimus tempora alias, modi eum ipsam est aliquid culpa dicta.</p>
+  </div>
+  <div class="bg-car p-5 position-relative">
+    <div class="bg-car-color"></div>
+    <div class="container d-flex justify-content-center align-items-center flex-wrap gap-4 position-relative" style="z-index: 2;">
+      <div class="text-white d-flex flex-column align-items-center">
+        <div class="rounded-circle border border-3 border-white d-flex align-items-center justify-content-center" style="font-size: 5.6rem; width: 10rem; height: 10rem;">
+          <i class="fa-solid fa-percent text-white"></i>
+        </div>
+        <h4>Cheap Price</h4>
+      </div>
+      <div class="text-white d-flex flex-column align-items-center">
+        <div class="rounded-circle border border-3 border-white d-flex align-items-center justify-content-center" style="font-size: 5.6rem; width: 10rem; height: 10rem;">
+          <i class="fa-solid fa-car-side"></i>
+        </div>
+        <h4>Quality</h4>
+      </div>
+      <div class="text-white d-flex flex-column align-items-center">
+        <div class="rounded-circle border border-3 border-white d-flex align-items-center justify-content-center" style="font-size: 5.6rem; width: 10rem; height: 10rem;">
+          <i class="fa-sharp fa-solid fa-shield-halved"></i>
+        </div>
+        <h4>Protection</h4>
+      </div>
+      <div class="text-white d-flex flex-column align-items-center">
+        <div class="rounded-circle border border-3 border-white d-flex align-items-center justify-content-center" style="font-size: 5.6rem; width: 10rem; height: 10rem;">
+          <i class="fa-solid fa-headphones"></i>
+        </div>
+        <h4>Communication</h4>
+      </div>
+      
+    </div>
+  </div>
+</div>
