@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "SUV Cars"
+    },
+    {
+        "id": 2,
+        "name": "Hatchack"
+    },
+    {
+        "id": 3,
+        "name": "Crossver"
+    },
+    {
+        "id": 4,
+        "name": "Convetible"
+    },
+    {
+        "id": 5,
+        "name": "Sedan"
+    },
+    {
+        "id": 6,
+        "name": "Sport Cars"
+    },
+    {
+        "id": 7,
+        "name": "Coupe"
+    },
+    {
+        "id": 8,
+        "name": "Minivn"
+    },
+    {
+        "id": 9,
+        "name": "Statin Wagon"
+    },
+    {
+        "id": 10,
+        "name": "Picku Truck"
+    }
+]

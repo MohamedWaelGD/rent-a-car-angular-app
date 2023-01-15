@@ -1,0 +1,17 @@
+<div class="container shadow my-5">
+  <div class="row">
+    <div class="col-12 col-md-2 p-3">
+      <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action" routerLink="/admin" [ngClass]="{'active': activeUrl === '/admin'}">Dashboard</button>
+        <button type="button" class="list-group-item list-group-item-action" routerLink="/admin/addCar" [ngClass]="{'active': activeUrl.startsWith('/admin/addCar')}">Add Car</button>
+        <button type="button" class="list-group-item list-group-item-action" routerLink="/admin/addBrand" [ngClass]="{'active': activeUrl.startsWith('/admin/addBrand')}">Add Brand</button>
+        <button type="button" class="list-group-item list-group-item-action" routerLink="/admin/cars" [ngClass]="{'active': activeUrl.startsWith('/admin/cars')}">Show Cars Table</button>
+        <button type="button" class="list-group-item list-group-item-action" routerLink="/admin/users" [ngClass]="{'active': activeUrl.startsWith('/admin/users')}">Show Users Table</button>
+      </div>
+    </div>
+    <div class="col-12 col-md-10 p-3">
+      <router-outlet>
+      </router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="container my-5">
+  <div class="shadow p-5">
+    <div class="row">
+      <div class="col-12 col-lg-3">
+        <ul class="list-group">
+          <li
+            class="list-group-item p-3 d-flex flex-column justify-content-center align-items-center bg-dark text-white" style="height: 330px;">
+            <div class="position-relative w-100 d-flex justify-content-center mb-2">
+              <div class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                <div class="rounded-circle"
+                  style="width: 180px; height: 180px; background-color: rgba(255, 255, 255, .6);"></div>
+              </div>
+              <div class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                <div class="rounded-circle"
+                  style="width: 200px; height: 200px; background-color: rgba(255, 255, 255, .6);"></div>
+              </div>
+              <img src="assets/person.jpg" class="rounded-circle position-relative"
+                style="width: 160px; height: 160px; z-index: 2;" />
+            </div>
+            <h4 class="mt-4 mb-2">Person Name</h4>
+            <h6>Person@email.com</h6>
+          </li>
+          <li class="list-group-item list-group-item-action" style="cursor: pointer;"><i class="fa-solid fa-pen-to-square"></i> Edit Username</li>
+          <li class="list-group-item list-group-item-action" style="cursor: pointer;"><i class="fa-solid fa-envelope"></i> Edit Email</li>
+          <li class="list-group-item list-group-item-action" style="cursor: pointer;"><i class="fa-solid fa-lock"></i> Edit Password</li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-9">
+        <div>
+          <h1>Profile</h1>
+          <p>Address: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius reiciendis commodi ipsa praesentium iste iure vero.</p>
+          <p>Birthdate: 2000/11/11</p>
+          <p>Phone Number: +20 123456789</p>
+          <p>User Type: Client/Seller/Admin</p>
+        </div>
+        <hr/>
+        <h1>Rented Cars</h1>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-2" *ngFor="let c of cars">
+            <div class="card h-100">
+              <img [src]="c.image" class="card-img-top" style="height: 17vh; object-fit: contain;" alt="...">
+              <div class="card-body">
+                <h1 class="card-title text-center">{{c.name}}</h1>
+                <hr class="my-0"/>
+                <p class="card-text mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae pariatur.</p>
+                <hr/>
+                <p class="fw-bold mb-0">Tags: {{c.tags}}</p>
+                <hr/>
+                <p class="fw-bold mb-0">Model: {{c.model}}</p>
+                <hr/>
+                <p class="fw-bold mb-0">Price: {{c.price}}$</p>
+                <hr/>
+                <div class="d-xxl-flex justify-content-between gap-1">
+                  <a href="#" class="btn btn-primary mb-1 me-1 p-3 h-100" routerLink="./{{c.id}}">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

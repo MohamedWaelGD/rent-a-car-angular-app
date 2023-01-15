@@ -9,6 +9,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(61, 17, 97, 0.6);
+    background-color: rgba(26, 26, 26, 0.8);
     z-index: 1;
+}
+
+.contact-icon {
+    font-size: 2rem;
 }

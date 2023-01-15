@@ -1,4 +1,4 @@
-<nav class="pt-2 pb-1 navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="pt-2 pb-2 navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="#">RentA Car</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" [ngClass]="{'active': activeUrl === '/'}" routerLink="">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">All Cars</a>
+            <a class="nav-link" [ngClass]="{'active': activeUrl.startsWith('/cars')}" routerLink="cars">All Cars</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">My Rent Cars</a>
+            <a class="nav-link" [ngClass]="{'active': activeUrl.startsWith('/admin')}" routerLink="admin">Admin</a>
           </li>
         </ul>
         <form class="d-flex flex-grow-1 my-2 me-2" role="search">
@@ -21,18 +21,20 @@
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         <div>
-          <button class="btn btn-light">Login</button>
+          <button class="btn btn-light me-2 mb-2 mb-lg-0" routerLink="/auth/login">Login</button>
+        </div>
+        <div>
+          <button class="btn btn-warning" routerLink="/profile">Profile</button>
         </div>
 
     </div>
   </div>
 </nav>
-<nav class="pt-2 pb-3 navbar navbar-dark bg-dark">
+<nav class="pb-3 pt-0 navbar navbar-dark bg-dark">
   <div class="container d-flex flex-column justify-content-center align-items-center">
-    <h5 class="m-0 mb-1 text-white">Categories</h5>
     <ul class="nav">
-      <li class="nav-item mt-2" *ngFor="let category of categories">
-        <a class="nav-link text-white btn btn-primary me-2" aria-current="page" href="#">{{category.name}}</a>
+      <li class="nav-item me-1 mt-1" *ngFor="let brand of brands">
+        <a class="nav-link text-white btn btn-primary me-2" aria-current="page" href="#">{{brand.name}}</a>
       </li>
     </ul>
   </div>

@@ -1,16 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommentComponent } from '../comment/comment.component';
+import { CreateCommentComponent } from '../createComment/createComment.component';
+import { FooterComponent } from '../footer/footer.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    CommentComponent,
+    CreateCommentComponent,
+    FooterComponent
   ],
   declarations: [
-    NavbarComponent
+    NavbarComponent,
+    CommentComponent,
+    CreateCommentComponent,
+    FooterComponent
   ]
 })
 export class CustomModule { }

@@ -1,0 +1,47 @@
+<div class="container my-5" *ngIf="selectedCar">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <img [src]="selectedCar.image" class="h-100 w-100" style="object-fit: contain;" />
+    </div>
+    <div class="col-12 col-md-6 p-4 shadow">
+      <h1>
+        {{selectedCar.name}}
+      </h1>
+      <hr/>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vitae eveniet corrupti impedit ipsam. Obcaecati, repellat ab accusamus modi ex culpa adipisci sint expedita dignissimos omnis laboriosam, rerum corporis. Sed.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vitae eveniet corrupti impedit ipsam. Obcaecati, repellat ab accusamus modi ex culpa adipisci sint expedita dignissimos omnis laboriosam, rerum corporis. Sed.</p>
+      <hr/>
+      <h5>Tags: <span>{{selectedCar.tags}}</span></h5>
+      <hr/>
+      <h3 *ngIf="carBrand">Brand: <span>{{carBrand.name}}</span></h3>
+      <hr/>
+      <h3>Model: <span>{{selectedCar.model}}</span></h3>
+      <hr/>
+      <h3>Price: <span>{{selectedCar.price}}$</span></h3>
+      <hr/>
+      <div class="d-flex justify-content-between align-items-center">
+        <button class="btn btn-primary">Order Now</button>
+        <div class="d-flex gap-3 align-items-center">
+          <i class="fa-solid fa-thumbs-up text-primary" style="font-size: 2.6rem; cursor: pointer;"></i>
+          <i class="fa-sharp fa-solid fa-cart-shopping text-primary" style="font-size: 2.6rem; cursor: pointer;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4 shadow p-3 w-100">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vitae eveniet corrupti impedit ipsam. Obcaecati, repellat ab accusamus modi ex culpa adipisci sint expedita dignissimos omnis laboriosam, rerum corporis. Sed.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vitae eveniet corrupti impedit ipsam. Obcaecati, repellat ab accusamus modi ex culpa adipisci sint expedita dignissimos omnis laboriosam, rerum corporis. Sed.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vitae eveniet corrupti impedit ipsam. Obcaecati, repellat ab accusamus modi ex culpa adipisci sint expedita dignissimos omnis laboriosam, rerum corporis. Sed.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vitae eveniet corrupti impedit ipsam. Obcaecati, repellat ab accusamus modi ex culpa adipisci sint expedita dignissimos omnis laboriosam, rerum corporis. Sed.</p>
+  </div>
+  <div class="mt-4 shadow p-3 w-100">
+    <h1>Comments | 3</h1>
+    <div>
+      <app-comment></app-comment>
+      <app-comment></app-comment>
+      <app-comment></app-comment>
+    </div>
+    <hr/>
+    <app-createComment></app-createComment>
+  </div>
+</div>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
+import { Brand } from 'src/app/models/brand';
+import { BrandService } from 'src/app/services/brand.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,52 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  categories: any[] = [
-    {
-      name: 'SUV Cars',
-      link: '',
-    },
-    {
-      name: 'Hatchback',
-      link: '',
-    },
-    {
-      name: 'Crossover',
-      link: '',
-    },
-    {
-      name: 'Convertible',
-      link: '',
-    },
-    {
-      name: 'Sedan',
-      link: '',
-    },
-    {
-      name: 'Sports Cars',
-      link: '',
-    },
-    {
-      name: 'Coupe',
-      link: '',
-    },
-    {
-      name: 'Minivan',
-      link: '',
-    },
-    {
-      name: 'Station Wagon',
-      link: '',
-    },
-    {
-      name: 'Pickup Truck',
-      link: '',
-    }
-  ]
+  brands!: Brand[];
+  activeUrl: string = '';
 
-  constructor() { }
+  constructor(private brandService: BrandService, private router: Router) {}
 
   ngOnInit() {
+    this.brandService.getCategories().subscribe(data => {
+      this.brands = data;
+    })
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd))
+      .subscribe(event => {
+          this.activeUrl = this.router.url;
+      });
   }
 
 }
